@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myButton {
+            background-color: gray;
+            padding: 1px;
+            border: solid black 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="myButton" onclick="click">Click me</button>
+    <p id="message"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector(".myButton");
+            const message = document.getElementById("message");
+
+            button.addEventListener("click", function () {
+                button.textContent = "Clicked!";
+                message.textContent = "Button was clicked!";
+            });
+        });
+    </script>
+</body>
+<!-- husk å les DOMContentLoaded og querySelector!! -->
+
+</html>
